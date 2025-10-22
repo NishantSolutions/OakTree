@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Oaktree School of Finance offers industry-recognized CA courses and expert-led training." />
+
+<title>Oaktree school of finance</title>
+<link rel="stylesheet" href="header.css" />
+
+<script>
+function toggleMenu() {
+document.getElementById("navLinks").classList.toggle("active");
+}
+
+// Function to open the Enquiry Modal
+function openEnquiryModal() {
+document.getElementById("enquiryModal").style.display = "block";
+}
+
+// Function to close the Enquiry Modal
+function closeEnquiryModal() {
+document.getElementById("enquiryModal").style.display = "none";
+
+window.onclick = function(event) {
+if (event.target == document.getElementById("enquiryModal")) {
+closeEnquiryModal();
+}
+}
+
+}
+
+</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/custom.css" rel="stylesheet" />
+
+
+</head>
+<body>
+<header>
+<div class="logo">Oaktree School of Finance</div>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="nav-links" id="navLinks">
+<a href="Header.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="#" onclick="openEnquiryModal()">Enquiries</a>
+<a href="admission.html">Admission</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- Enquiry Modal -->
+<div id="enquiryModal">
+<div id="modalContent">
+<button class="closeBtn" onclick="closeEnquiryModal()">X</button>
+<!-- <div class="modal-header">Course Enquiry</div>
+<form>
+<div class="form-control">
+<input type="text" placeholder="Enter your Name" required />
+</div>
+<div class="form-control">
+<input type="email" placeholder="Enter Your Email" required />
+</div>
+<div class="form-control">
+<select class="form-select" required>
+<option selected disabled>— Select a Course —</option>
+<option>Web Development</option>
+<option>Data Science</option>
+<option>Cloud Computing</option>
+</select>
+</div>
+<div class="form-control">
+<textarea placeholder="Your Enquiry" required></textarea>
+</div>
+<div class="form-control">
+<button type="submit">Submit Enquiry</button>
+</div>
+
+</form>
+<div class="help-box mt-4">
+<h4>Need Help?</h4>
+<p>Email: support@yourwebsite.com</p>
+<p>Phone: +91 1234567890</p>
+<p>Mon – Sat: 10 AM – 6 PM</p>
+</div> -->
+<div class="form-title">
+🎓 Enquire About a Course
+</div>
+<form>
+<div class="mb-3">
+<label class="form-label">Full Name*</label>
+<input type="text" class="form-control" placeholder="Name" required />
+</div>
+<div class="mb-3">
+<label class="form-label">Email Address*</label>
+<input type="email" class="form-control" placeholder="Email" required />
+</div>
+<div class="mb-3">
+<label class="form-label">Phone Number*</label>
+<input type="tel" class="form-control" placeholder="Phone" required />
+</div>
+<div class="mb-3">
+<label class="form-label">Preferred Contact Method</label>
+<div class="contact-methods">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="contactMethod" id="email" checked>
+<label class="form-check-label" for="email">Email</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="contactMethod" id="call">
+<label class="form-check-label" for="call">Phone Call</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="contactMethod" id="whatsapp">
+<label class="form-check-label" for="whatsapp">WhatsApp</label>
+</div>
+</div>
+</div>
+<div class="mb-3">
+<label class="form-label">Your Query</label>
+<textarea class="form-control" rows="3" placeholder="Type your question here..." required></textarea>
+</div>
+<button type="submit" class="btn btn-custom">Submit Enquiry</button>
+</form>
+<div class="contact-help">
+<h5>Need Help?</h5>
+<p>📧 Email: support@yourwebsite.com</p>
+<p>📞 +91 99*********</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<section class="hero">
+<div class="hero-text">
+<h1>Master New Skills<br>
+From Anywhere </h1>
+<button onclick="window.location.href='courses.html'">Explore Courses>></button> <br>
+<input type="text" name="Email" placeholder="Sign Up using Email...">
+<input type="submit" value="submit">
+</div>
+<img src="banner.png" width="500" />
+</section>
+
+<section class="features">
+<div>
+<img src="https://img.icons8.com/ios-filled/50/000000/play.png" />
+<h4>Featured Courses</h4>
+<p>Explore our most popular programs.</p>
+</div>
+<div>
+<img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" />
+<h4>Become an Instructor</h4>
+<p>Join our community of teachers.</p>
+</div>
+<div>
+<img src="https://img.icons8.com/ios-filled/50/000000/certificate.png" />
+<h4>Certified Programs</h4>
+<p>Gain industry-recognized credentials.</p>
+</div>
+<div>
+<img src="https://img.icons8.com/ios-filled/50/000000/speech-bubble.png" />
+<h4>Student Testimonials</h4>
+<p>Hear from our successful learners.</p>
+</div>
+</section>
+
+<div class="founder-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="section-title">
+          A Vision by <span class="highlight">Industry Trailblazers</span>
+        </h2>
+        <p class="lead">
+          Oaktree School of Finance was envisioned by seasoned professionals from global institutions like <strong>Harvard Business School</strong> and <strong>Kellogg School of Management</strong>. 
+          Their mission? To build a next-gen learning ecosystem that bridges the gap between academic knowledge and real-world financial expertise.
+        </p>
+        <p>
+          Our founders bring years of global experience in investment banking, consulting, and corporate finance to craft a curriculum that’s relevant, rigorous, and results-driven.
+        </p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="Banner2.png" alt="Industry Leaders" class="img-fluid founder-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="about-section py-5 bg-white" id="about">
+  <div class="container">
+    <!-- First Row: About Us Left, Image Right -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <div class="about-text newspaper-style">
+          <h2>About Us</h2>
+          <p>Learn more about our mission and values.</p>
+          <p>As a leading provider of Chartered Accountancy (CA) programs, we specialize in delivering high-quality, exam-focused coaching designed to help aspiring CAs succeed with confidence. Our curated curriculum, led by experienced professionals and top educators, is tailored to meet the latest ICAI standards and exam patterns.</p>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="banner.png" alt="About Us Image" class="image-fluid rounded shadow" />
+      </div>
+    </div>
+
+    <!-- Second Row: Image Left, Empowering Text Right -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <div class="about-text">
+          <h2>Empowering Your Learning Journey</h2>
+          <p>We believe education is more than just textbooks and tests — it’s about growth, confidence, and unlocking your true potential. Our mission is to empower learners at every stage of their journey by providing the right tools, expert guidance, and a supportive environment. Whether you're preparing for a professional qualification or seeking to sharpen your skills, we’re here to make your path smoother and more impactful.</p>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="Banner2.png" alt="Empowerment Image" class="image-fluid rounded shadow" />
+      </div>
+    </div>
+
+    <!-- Mission, Values, Vision -->
+    <div class="about-highlights py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2 class="highlight-heading">Our Core Pillars</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="highlight-box">
+              <h4>Our Mission</h4>
+              <p>To inspire and nurture finance professionals through practical training, enhancing career opportunities and creating global solution providers.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="highlight-box">
+              <h4>Our Values</h4>
+              <p>Guided by integrity, strategic thinking, and analytical excellence, we enable ethical decisions and leadership in finance.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="highlight-box">
+              <h4>Our Vision</h4>
+              <p>Transforming finance careers from degree to skills through principle-centered learning and real-world capability development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</section>
+
+
+<footer>
+<div class="footer-container">
+<div class="footer-about">
+<h3>Oaktree School of Finance</h3>
+<p>Empowering future Chartered Accountants with expert-led education, practical insights, and success-driven support. Learn from the best to become the best.</p>
+</div>
+<div class="footer-contact">
+<h4>Contact Us</h4>
+<p>Email: <a href="mailto:contact@oaktreeschool.com">contact@oaktreeschool.com</a></p>
+<p>Phone: +91 98765 43210</p>
+<input type="text" placeholder="How can we help you?" />
+</div>
+
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="Header.html">Home</a></li>
+<li><a href="courses.html">Courses</a></li>
+<li><a href="admission.html">Admission</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="termofuse.html">Term of Use</a></li>
+
+</ul>
+</div>
+<div class="footer-social">
+<h4>Follow Us</h4>
+<a href="https://www.linkedin.com/in/skuma375/" target="_blank"><img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" alt="LinkedIn" /></a>
+<a href="https://www.linkedin.com/in/sanjeev-chopra-57133164/" target="_blank"><img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" alt="LinkedIn" /></a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 Oaktree School of Finance. All rights reserved.</p>
+</div>
+</footer>
+</body>
+
+</html>
+

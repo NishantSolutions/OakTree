@@ -1,0 +1,606 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+  <meta charset="UTF-8"> 
+
+  <title>Terms & Conditions - Oaktree</title> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+  <style> 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: #0d1117;
+    background-color: #fdfbf8;
+    background-color: white;
+    scroll-behavior: smooth;
+      
+    color: #ffffff;
+    padding-top: 0 !important;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+  }
+
+  
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: grey;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #5e9beb;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: black;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #1a1a1a;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .nav-links {
+    display: flex;
+    margin-right: 30%;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffffff;
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 8px 0;
+      z-index: 1000;
+    }
+  
+    .nav-links a {
+      margin: 12px 0;
+      font-size: 16px;
+      color: #1a1a1a;
+      font-weight: 500;
+      text-align: center;
+      width: 100%;
+      padding: 8px 0;
+      transition: background 0.3s ease;
+    }
+  
+    .nav-links a:hover {
+      background-color: #f2f2f2;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .search {
+      display: none;
+    }
+    .timeline-step {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .circle {
+      margin-bottom: 10px;
+    }
+  }
+  
+  #enquiryModal {
+    display: none; /* Hidden by default */
+    
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's on top */
+    }
+    
+    /* Modal Content */
+    #modalContent {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 80%;
+    max-width: 480px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Allow scrolling inside the modal */
+    max-height: 80vh; /* Maximum height for the modal */
+    }
+    
+    .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    }
+    
+    .modal-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      .contact-methods {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+      .form-check {
+        display: flex;
+        align-items: center;
+      }
+      .form-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #1a2b5b;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+      .form-label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #1a2b5b;
+        display: block;
+      }
+      
+    
+      .form-check-label {
+        margin-left: 5px;
+        color: #1a2b5b;
+      }
+  
+        input[type="text"], input[type="email"], textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          }
+                
+  
+  .form-control input,
+  .form-control textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    }
+  
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  .form-select {
+    padding: 10px;
+    width: 324px;
+    color: grey;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    }
+  
+  .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+  }
+  .btn-custom {
+    background-color: #1a2b5b;
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .btn-custom:hover {
+    background-color: #0f1f3e;
+  }
+  .contact-help {
+    text-align: center;
+    margin-top: 25px;
+    color: #1a2b5b;
+  }
+  
+  .contact-help p {
+    margin: 4px 0;
+  }
+  
+  .form-control button {
+    background-color: #5e9beb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-control button:hover {
+    background-color: #454545;
+  }
+  
+  .help-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .help-box h4 {
+    color: #1a2b5b;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+    body { 
+
+      background-color: #f8f9fa; 
+
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+      font-size: 15px; 
+
+    } 
+
+    .section { 
+
+      padding: 50px 20px; 
+
+    } 
+
+    .terms-box { 
+
+      background: #ffffff; 
+
+      border-radius: 10px; 
+
+      padding: 30px 25px; 
+
+      box-shadow: 0 0 15px rgba(0,0,0,0.05); 
+
+    } 
+
+    h1 { 
+
+      font-size: 1.8rem; 
+
+      text-align: center; 
+
+      color: #0d6efd; 
+
+      font-weight: 700; 
+
+      margin-bottom: 10px; 
+
+    } 
+
+    .update-text { 
+
+      text-align: center; 
+
+      color: #6c757d; 
+
+      margin-bottom: 25px; 
+
+      font-size: 0.9rem; 
+
+    } 
+
+    h2 { 
+
+      font-size: 1.1rem; 
+
+      font-weight: 600; 
+
+      margin-bottom: 8px; 
+
+      color: #212529; 
+
+    } 
+
+    p { 
+
+      font-size: 0.95rem; 
+
+      line-height: 1.6; 
+
+      color: #343a40; 
+
+      margin-bottom: 20px; 
+
+    } 
+
+    footer { 
+
+      padding: 15px 0; 
+
+      background-color: #212529; 
+
+      color: #f8f9fa; 
+
+      text-align: center; 
+
+      font-size: 0.85rem; 
+
+    } 
+
+  </style> 
+
+</head> 
+
+<body> 
+    <header>
+        <div class="logo">PROGRAMS</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links" id="navLinks">
+          <a href="Header.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="#" onclick="openEnquiryModal(event)">Enquiries</a>
+          <a href="admission.html">Admission</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms&use.html">Terms & Use</a>
+        </nav>
+      </header>
+    
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal">
+      <div id="modalContent">
+        <button class="closeBtn" onclick="closeEnquiryModal()">×</button>
+        <div class="form-title">🎓 Enquire About a Course</div>
+        <form>
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your full name" required />
+    
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="Enter your email" required />
+    
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Enter your phone number" required />
+    
+          <label class="form-label">Preferred Contact Method</label>
+          <div class="contact-methods">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="contactMethod" id="email" checked>
+              <label class="form-check-label" for="email">Email</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="contactMethod" id="call">
+              <label class="form-check-label" for="call">Phone Call</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="contactMethod" id="whatsapp">
+              <label class="form-check-label" for="whatsapp">WhatsApp</label>
+            </div>
+          </div>
+    
+          <label class="form-label">Select a Course</label>
+          <select class="form-select" required>
+            <option selected disabled>— Select a Course —</option>
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>Cloud Computing</option>
+          </select>
+          <br>
+          <label class="form-label">Your Query</label>
+          <textarea class="form-control" rows="3" placeholder="Type your question here..." required></textarea>
+    
+          <button type="submit" class="btn-custom">Submit Enquiry</button>
+        </form>
+    
+        <div class="contact-help">
+          <h5>Need Help?</h5>
+          <p>📧 Email: support@yourwebsite.com</p>
+          <p>📞 +91 1234567890</p>
+          <p>Mon – Sat: 10 AM – 6 PM</p>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Show modal only when "Enquiries" is clicked
+      function openEnquiryModal(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.getElementById("enquiryModal").style.display = "flex";
+      }
+    
+      function closeEnquiryModal() {
+        document.getElementById("enquiryModal").style.display = "none";
+      }
+    
+      // Optional: Close modal when clicking outside of the form
+      window.onclick = function (event) {
+        const modal = document.getElementById("enquiryModal");
+        if (event.target === modal) {
+          closeEnquiryModal();
+        }
+      };
+    </script>
+
+ 
+
+  <div class="container section"> 
+
+    <div class="terms-box mx-auto"> 
+
+      <h1>Terms & Conditions</h1> 
+
+            <h2>1. Acceptance of Terms</h2> 
+
+      <p>By using this website (<a href="https://www.yourwebsite.in" target="_blank">www.website.in</a>), you agree to comply with and be bound by these terms. If you do not agree, please do not access this website.</p> 
+
+ 
+
+      <h2>2. Use of Website</h2> 
+
+      <p>This website is provided for informational purposes related to finance education. Users are not permitted to misuse the website or attempt unauthorized access.</p> 
+
+ 
+
+      <h2>3. Intellectual Property</h2> 
+
+      <p>All content including text, graphics, and branding is owned by Oaktree and is protected under Indian copyright law. You may not reuse or distribute without written consent.</p> 
+
+ 
+
+      <h2>4. No Guarantee of Accuracy</h2> 
+
+      <p>While we aim to provide accurate and updated information, we do not guarantee that all information is free from errors or omissions.</p> 
+
+ 
+
+      <h2>5. Limitation of Liability</h2> 
+
+      <p>We are not liable for any direct or indirect damages arising from the use of this website. All educational content is provided “as is” for learning purposes only.</p> 
+
+ 
+
+      <h2>6. Third-Party Links</h2> 
+
+      <p>This website may contain links to external websites. We are not responsible for the content or reliability of third-party sites.</p> 
+
+ 
+
+      <h2>7. Governing Law</h2> 
+
+      <p>These terms shall be governed by and interpreted in accordance with the laws of India. Any disputes shall be resolved under the jurisdiction of Indian courts.</p> 
+
+ 
+
+    </div> 
+
+  </div> 
+
+ 
+
+  <footer> 
+
+    &copy; 2025 Oaktree. All Rights Reserved. 
+
+  </footer> 
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+
+</body> 
+
+</html> 

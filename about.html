@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oaktree School of Finance - About Us</title>
+  <script src="javaScript.js"></script>
+  <link rel="stylesheet" href="about.css"> 
+</head>
+<body>
+  <header>
+    <div class="logo">PROGRAMS</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="Header.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="#" onclick="openEnquiryModal(event)">Enquiries</a>
+      <a href="admission.html">Admission</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Enquiry Modal -->
+  <!-- Enquiry Modal -->
+<div id="enquiryModal">
+  <div id="modalContent">
+    <button class="closeBtn" onclick="closeEnquiryModal()">×</button>
+    <div class="form-title">🎓 Enquire About a Course</div>
+    <form>
+      <label class="form-label">Full Name</label>
+      <input type="text" class="form-control" placeholder="Enter your full name" required />
+
+      <label class="form-label">Email Address</label>
+      <input type="email" class="form-control" placeholder="Enter your email" required />
+
+      <label class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" placeholder="Enter your phone number" required />
+
+      <label class="form-label">Preferred Contact Method</label>
+      <div class="contact-methods">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="contactMethod" id="email" checked>
+          <label class="form-check-label" for="email">Email</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="contactMethod" id="call">
+          <label class="form-check-label" for="call">Phone Call</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="contactMethod" id="whatsapp">
+          <label class="form-check-label" for="whatsapp">WhatsApp</label>
+        </div>
+      </div>
+
+      <label class="form-label">Select a Course</label>
+      <select class="form-select" required>
+        <option selected disabled>— Select a Course —</option>
+        <option>Web Development</option>
+        <option>Data Science</option>
+        <option>Cloud Computing</option>
+      </select>
+
+      <label class="form-label">Your Query</label>
+      <textarea class="form-control" rows="3" placeholder="Type your question here..." required></textarea>
+
+      <button type="submit" class="btn-custom">Submit Enquiry</button>
+    </form>
+
+    <div class="contact-help">
+      <h5>Need Help?</h5>
+      <p>📧 Email: support@yourwebsite.com</p>
+      <p>📞 +91 1234567890</p>
+      <p>Mon – Sat: 10 AM – 6 PM</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Show modal only when "Enquiries" is clicked
+  function openEnquiryModal(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    document.getElementById("enquiryModal").style.display = "flex";
+  }
+
+  function closeEnquiryModal() {
+    document.getElementById("enquiryModal").style.display = "none";
+  }
+
+  // Optional: Close modal when clicking outside of the form
+  window.onclick = function (event) {
+    const modal = document.getElementById("enquiryModal");
+    if (event.target === modal) {
+      closeEnquiryModal();
+    }
+  };
+</script>
+
+  <!-- About Section -->
+  <div class="container">
+    <section class="scroll-section">
+      <div class="row">
+        <div class="col-50">
+          <h2 class="section-title">About Us</h2>
+          <p>Learn more about our mission and values.</p>
+          <img src="WhatsApp Image 2025-04-15 at 15.32.50.jpeg" alt="About Image" class="about-img" />
+        </div>
+        <div class="col-50">
+          <h3>Who We Are</h3>
+          <p>We are a leading educational platform providing a variety of certified courses to help students achieve academic and career success. Our dedicated team ensures quality and excellence in every course offered.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-section">
+      <h2 class="section-title">Our Mission</h2>
+      <div class="row">
+        <div class="col-33">
+          <div class="icon">🏁</div>
+          <h5>Our Mission</h5>
+          <p>To deliver accessible and high-quality education to students around the world.</p>
+        </div>
+        <div class="col-33">
+          <div class="icon">👁️</div>
+          <h5>Our Values</h5>
+          <p>Integrity, Innovation, and Inclusion are at the heart of everything we do.</p>
+        </div>
+        <div class="col-33">
+          <div class="icon">📖</div>
+          <h5>Our Story</h5>
+          <p>Started with a vision to transform online learning, we’ve helped thousands learn new skills.</p>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 60px;">
+        <div class="col-50">
+          <h3>Our Vision</h3>
+          <p>To become a global leader in online education, empowering learners with knowledge, skills, and confidence to achieve their dreams.</p>
+        </div>
+        <div class="col-50">
+          <img src="WhatsApp Image 2025-04-15 at 15.32.49.jpeg" alt="Vision Image" class="about-img" />
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

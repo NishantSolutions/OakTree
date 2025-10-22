@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Leadership Program</title>
+  
+  <link rel="stylesheet" href="courses.css"> 
+  <!-- <script src="courses.js"></script> -->
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">PROGRAMS</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="Header.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="#" onclick="openEnquiryModal(event)">Enquiries</a>
+      <a href="admission.html">Admission</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Enquiry Modal -->
+<!-- Enquiry Modal -->
+<div id="enquiryModal">
+  <div id="modalContent">
+    <button class="closeBtn" onclick="closeEnquiryModal()">×</button>
+    <div class="form-title">🎓 Enquire About a Course</div>
+    <form>
+      <label class="form-label">Full Name</label>
+      <input type="text" class="form-control" placeholder="Enter your full name" required />
+
+      <label class="form-label">Email Address</label>
+      <input type="email" class="form-control" placeholder="Enter your email" required />
+
+      <label class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" placeholder="Enter your phone number" required />
+
+      <label class="form-label">Preferred Contact Method</label>
+      <div class="contact-methods">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="contactMethod" id="email" checked>
+          <label class="form-check-label" for="email">Email</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="contactMethod" id="call">
+          <label class="form-check-label" for="call">Phone Call</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="contactMethod" id="whatsapp">
+          <label class="form-check-label" for="whatsapp">WhatsApp</label>
+        </div>
+      </div>
+
+      <label class="form-label">Select a Course</label>
+      <select class="form-select" required>
+        <option selected disabled>— Select a Course —</option>
+        <option>Web Development</option>
+        <option>Data Science</option>
+        <option>Cloud Computing</option>
+      </select>
+      
+      <label class="form-label">Your Query</label>
+      <textarea class="form-control" rows="3" placeholder="Type your question here..." required></textarea>
+
+      <button type="submit" class="btn-custom">Submit Enquiry</button>
+    </form>
+
+    <div class="contact-help">
+      <h5>Need Help?</h5>
+      <p>📧 Email: support@yourwebsite.com</p>
+      <p>📞 +91 1234567890</p>
+      <p>Mon – Sat: 10 AM – 6 PM</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Show modal only when "Enquiries" is clicked
+  function openEnquiryModal(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    document.getElementById("enquiryModal").style.display = "flex";
+  }
+
+  function closeEnquiryModal() {
+    document.getElementById("enquiryModal").style.display = "none";
+  }
+
+  // Optional: Close modal when clicking outside of the form
+  window.onclick = function (event) {
+    const modal = document.getElementById("enquiryModal");
+    if (event.target === modal) {
+      closeEnquiryModal();
+    }
+  };
+</script>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Finance Leadership Program</h1>
+      <p>Enhance your financial management and leadership skills with our comprehensive online course.</p>
+      <form action="admission.html">
+        <button type="submit" class="btn">Enroll Now</button>
+      </form>
+      
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="overview">Overview</button>
+    <button class="tab-btn" data-tab="curriculum">Curriculum</button>
+    <button class="tab-btn" data-tab="instructor">Instructor</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content" id="overview">
+    <h3>About This Course</h3>
+    <p>
+      The course outlines your essential financial management and strategic leadership skills.
+      This course is designed for mid to senior–level professionals, to equip you with the tools,
+      implement insightful financial decisions, and lead organizations effectively.
+    </p>
+
+    <h3 style="margin-top:40px;">What You’ll Learn</h3>
+    <div class="learn-items">
+      <div class="learn-item">
+        <i>📊</i>
+        <p>Financial analysis and decision-making</p>
+      </div>
+      <div class="learn-item">
+        <i>💡</i>
+        <p>Strategic leadership principles</p>
+      </div>
+      <div class="learn-item">
+        <i>💼</i>
+        <p>Risk management techniques</p>
+      </div>
+      <div class="learn-item">
+        <i>📈</i>
+        <p>Driving organizational performance</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="curriculum" style="display:none;">
+
+    <h3>Course Curriculum</h3>
+    <ul class="module-list">
+      <li>Module 1: Fundamentals of Financial Leadership</li>
+      <li> Module 2: Budgeting, Forecasting &amp; Cost Control</li>
+      <li> Module 3: Strategic Decision-Making Techniques</li>
+      <li> Module 4: Leading Financial Transformation</li>
+      <li> Module 5: Case Studies & Real-world Scenarios</li>
+    </ul>
+  </div>
+  
+
+  <div class="tab-content" id="instructor" style="display:none;">
+    <h3>Meet Your Instructor</h3>
+    <p>
+      <strong>John Carter</strong> is a certified financial expert and leadership coach with over 15 years of experience mentoring executives across Fortune 500 companies.
+    </p>
+    <p>
+      He brings practical strategies, industry insight, and engaging real-world case studies to help you grow into a confident finance leader.
+    </p>
+  </div>
+
+  <section class="admission-section">
+    <h1 class="admission-title">Admission Process</h1>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="circle">1</div>
+        <div class="step-content">
+          <h3>Info Session</h3>
+          <p>Attend a 30-minute online session conducted by the co-founder to get an overview of the program.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="circle">2</div>
+        <div class="step-content">
+          <h3>Mesa Admissions Test</h3>
+          <p>60-minute online test including numerical reasoning, critical thinking, logical reasoning (MCQs), a video essay, and a written component.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="circle">3</div>
+        <div class="step-content">
+          <h3>Written Essay</h3>
+          <p>Submit a 500-word essay that tells your story and shares your aspirations.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="circle">4</div>
+        <div class="step-content">
+          <h3>Interview Process</h3>
+          <p>Selected candidates meet in person with faculty, founders, and startup leaders. Includes take-home assignments.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="circle">5</div>
+        <div class="step-content">
+          <h3>Case-Based Assignment</h3>
+          <p>Post-interview, candidates complete a case-based assignment to test their thinking and problem-solving.</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="admission.html" class="enroll-btn">Apply Now</a>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer-note">
+    &copy; 2025 TEACH Platform | Finance Leadership Program
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabs.forEach(tab => tab.classList.remove('active'));
+    btn.classList.add('active');
+
+    contents.forEach(content => {
+      content.style.display = content.id === btn.dataset.tab ? 'block' : 'none';
+    });
+  });
+});
+
+
+document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+      document.querySelectorAll('.tab-content')[idx].style.display = 'block';
+    });
+  });
+  </script>
+</body>
+</html>
